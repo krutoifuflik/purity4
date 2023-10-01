@@ -1,0 +1,13 @@
+.navbar{
+    position: fixed;
+    z-index: 3;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    padding-top: 8em;
+    color: white;
+}
+.modal-content{
+    color: black;
+}

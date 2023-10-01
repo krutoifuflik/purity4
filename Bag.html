@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>purity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+
+
+<body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed top-0 start-0 w-100">
+            <div class="container">
+                <a class="navbar-brand d-lg-none" href="index.html">
+                    P U R I T Y
+                </a>
+            
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+        
+                    </button>
+                <div class="collapse navbar-collapse p-2 flex-column" id="navbarContent">
+                    <div class="d-flex justify-content-center justify-content-lg-between flex-column flex-lg-row w-100">
+                        <form class="d-flex">
+                            <input
+                        class="form-control me-2"
+                        type="search"
+                        placeholder="Search"
+                        />
+                         <button class="btn btn-outline-dark" type="submit">
+                            <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                        <a class="navbar-brand d-none d-lg-block" href="index.html">
+                        P U R I T Y
+                        </a>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown d-flex align-items-center ">
+                            <a class="nav-link dropdown-toggle " href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user"></i>
+                                My Account
+
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li>
+                                    
+                                        <button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#SingInModal" id="signInBtn">
+                                    
+                                            Sing In
+                                        </button>
+                                    
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                    
+                                        <button class="nav-link mx-2" id="signUpBtn">
+                                        Sign Up
+                                    
+                                        </button>
+                                     </a>
+                                </li>
+                                
+                            </ul>
+                      
+                            </li>
+                            <li class="nav-item d-flex align-items-center">
+                                <a class="nav-link mx-2" href="Bag.html">
+                                    <i class="fas fa-shopping-bag"></i>
+                                 Bag
+                                </a>
+                             <span class="badge rounded-pill bg-secondary">
+                                 1
+                                </span>
+                            </li>
+                        </ul>
+                    
+                    </div>
+
+                
+
+
+                    <div class="d-block w-100">
+                        <ul class="navbar-nav d-flex justify-content-center align-items-center pt-3">
+                            <li class="nav-tem mx-2">
+                             <a class="nav-link" href="clothing.html">
+                                Clothing
+                                </a>
+                            </li>
+                            <li class="nav-tem mx-2">
+                                <a class="nav-link" href="#">
+                                Shoes
+                                </a>
+                            </li>
+                            <li class="nav-tem mx-2">
+                                <a class="nav-link" href="#">
+                                Accessories
+                                </a>
+                            </li>
+                            <li class="nav-tem mx-2">
+                                <a class="nav-link" href="#">
+                                About
+                                </a>
+                            </li>
+                            <li class="nav-tem mx-2">
+                                <a class="nav-link" href="#">
+                                Blog
+                                </a>
+                            </li>
+                            <li class="nav-tem mx-2">
+                                <a class="nav-link" href="#">
+                                Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- MODAL-->
+        <div class="modal fade" id="SingInModal" tabindex="-1" aria-labelledby="SingInModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="SignInModalLabel">
+                            Sign IN
+                        </h5>
+                        <button class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                    </div>
+                    <div class="modal-body">
+                       <form action="">
+                        <div class="row mb-3">
+                            <label for="InputEmail" class="col-sm-2 col-form-label">E-mail</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="InputEmail">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="InputPass" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="InputPass">
+                            </div>
+                        </div>
+                        <fieldset>
+                            <div class="row mb-3"
+                                <div class="col-from-label col-sm-10">Save Password?</div>
+
+                                    <div class="col-sm-10">
+                                        <div class="form-check">
+                                            <input type="checkbox" id="gridcheck" class="form-check-input">
+                                            <label for="gridcheck" class="form-check-label">save</label>
+                                        </div>
+                                     </div>
+                            
+                        </fieldset>
+                       </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-secondary">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MODAL-->
+
+
+        <!-- BODY-->
+
+        <div class="container position-relative text-center">
+            <p class="text-uppercase fs-1 mt-4">your bag</p>
+            <div class="container-fluid ">
+                <div class="row">
+                    <div class="col-4 col-sm-4">
+                        <div class="d-flex justify-content-between align-items-center flex-column flex-lg-row my-5" id="new">
+                            <div class="card m-2">
+                                <a href="./product.html">
+                                    <img src="images/clothes1.webp" class="card-image-top" height="300" alt="Product">
+                                </a>
+                                <div class="card-body">
+                                    <p class="card-text fw-bold">
+                                        Balenciaga logo-print hoodie
+                                    </p>
+                                    <small class="text-secondary">
+                                        USD 799$
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-sm-4">
+                        <p class="text-uppercase fs-4">Choose Size:</p>
+                        <select id="sizeSelect" class="form-select mb-3">
+                            <option selected>Select Size</option>
+                            <option value="799">Small</option>
+                            <option value="799">Medium</option>
+                            <option value="799">Large</option>
+                        </select>
+                        <p class="text-uppercase fs-4">Choose Shipping Method:</p>
+                        <select id="shippingSelect" class="form-select mb-3">
+                            <option selected>Select Shipping</option>
+                            <option value="0">Standard Shipping</option>
+                            <option value="20">Express Shipping (USD 20)</option>
+                        </select>
+                        <p class="text-uppercase fs-4">Enter Address:</p>
+                        <input type="text" id="addressInput" class="form-control mb-3" placeholder="Enter your address">
+                    </div>
+                    <div class="col-4 col-sm-4">
+                        <p class="text-uppercase fs-4">Price Check:</p>
+                        <p id="totalPrice">Total Price: USD 0</p>
+                        <button id="buyButton" class="btn btn-primary">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // JavaScript to calculate and display the total price based on size and shipping method
+            const sizeSelect = document.getElementById('sizeSelect');
+            const shippingSelect = document.getElementById('shippingSelect');
+            const addressInput = document.getElementById('addressInput');
+            const totalPriceElement = document.getElementById('totalPrice');
+            const buyButton = document.getElementById('buyButton');
+        
+            sizeSelect.addEventListener('change', updateTotalPrice);
+            shippingSelect.addEventListener('change', updateTotalPrice);
+        
+            function updateTotalPrice() {
+                const selectedSizePrice = parseFloat(sizeSelect.value);
+                const selectedShippingPrice = parseFloat(shippingSelect.value);
+                const total = selectedSizePrice + selectedShippingPrice;
+        
+                totalPriceElement.textContent = `Total Price: USD ${total.toFixed(2)}`;
+            }
+        </script>
+        
+
+
+
+
+
+        <!-- BODY-->
+
+        <footer class="d-flex justify-content-between my-5 text-start flex-wrap">
+            <ul class="nav flex-column">
+                <li class="fw-bold nav-item">
+                    <a href="#" class="nav-link text-light">
+                        Product
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        Clothing
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        Shoes
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        Accessories
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav flex-column">
+                <li class="fw-bold nav-item text-light">
+                    <a href="#" class="nav-link text-light">
+                        Help
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        Shopping Guide
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        Product Care
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        Contact Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        Return Process
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav flex-column">
+                <li class="fw-bold nav-item text-dark">
+                    <a href="#" class="nav-link text-light">
+                        Content
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        Blog
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        Career
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        Pressroom
+                    </a>
+                </li>
+            </ul>
+        </footer>
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>

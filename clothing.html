@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>purity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+
+
+<body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed top-0 start-0 w-100">
+            <div class="container">
+                <a class="navbar-brand d-lg-none" href="index.html">
+                    P U R I T Y
+                </a>
+            
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+        
+                    </button>
+                <div class="collapse navbar-collapse p-2 flex-column" id="navbarContent">
+                    <div class="d-flex justify-content-center justify-content-lg-between flex-column flex-lg-row w-100">
+                        <form class="d-flex">
+                            <input
+                        class="form-control me-2"
+                        type="search"
+                        placeholder="Search"
+                        />
+                         <button class="btn btn-outline-dark" type="submit">
+                            <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                        <a class="navbar-brand d-none d-lg-block" href="index.html">
+                        P U R I T Y
+                        </a>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown d-flex align-items-center ">
+                            <a class="nav-link dropdown-toggle " href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user"></i>
+                                My Account
+
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li>
+                                    
+                                        <button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#SingInModal" id="signInBtn">
+                                    
+                                            Sing In
+                                        </button>
+                                    
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                    
+                                        <button class="nav-link mx-2" id="signUpBtn">
+                                        Sign Up
+                                    
+                                        </button>
+                                     </a>
+                                </li>
+                                
+                            </ul>
+                      
+                            </li>
+                            <li class="nav-item d-flex align-items-center">
+                                <a class="nav-link mx-2" href="Bag.html">
+                                    <i class="fas fa-shopping-bag"></i>
+                                 Bag
+                                </a>
+                             <span class="badge rounded-pill bg-secondary">
+                                 1
+                                </span>
+                            </li>
+                        </ul>
+                    
+                    </div>
+
+                
+
+
+                    <div class="d-block w-100">
+                        <ul class="navbar-nav d-flex justify-content-center align-items-center pt-3">
+                            <li class="nav-tem mx-2">
+                             <a class="nav-link" href="clothing.html">
+                                Clothing
+                                </a>
+                            </li>
+                            <li class="nav-tem mx-2">
+                                <a class="nav-link" href="#">
+                                Shoes
+                                </a>
+                            </li>
+                            <li class="nav-tem mx-2">
+                                <a class="nav-link" href="#">
+                                Accessories
+                                </a>
+                            </li>
+                            <li class="nav-tem mx-2">
+                                <a class="nav-link" href="#">
+                                About
+                                </a>
+                            </li>
+                            <li class="nav-tem mx-2">
+                                <a class="nav-link" href="#">
+                                Blog
+                                </a>
+                            </li>
+                            <li class="nav-tem mx-2">
+                                <a class="nav-link" href="#">
+                                Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- MODAL-->
+        <div class="modal fade" id="SingInModal" tabindex="-1" aria-labelledby="SingInModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="SignInModalLabel">
+                            Sign IN
+                        </h5>
+                        <button class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                    </div>
+                    <div class="modal-body">
+                       <form action="">
+                        <div class="row mb-3">
+                            <label for="InputEmail" class="col-sm-2 col-form-label">E-mail</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="InputEmail">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="InputPass" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="InputPass">
+                            </div>
+                        </div>
+                        <fieldset>
+                            <div class="row mb-3"
+                                <div class="col-from-label col-sm-10">Save Password?</div>
+
+                                    <div class="col-sm-10">
+                                        <div class="form-check">
+                                            <input type="checkbox" id="gridcheck" class="form-check-input">
+                                            <label for="gridcheck" class="form-check-label">save</label>
+                                        </div>
+                                     </div>
+                            
+                        </fieldset>
+                       </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-secondary">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MODAL-->
+
+
+        <!-- BODY-->
+
+        <div class="container py-5">
+            <h1 class="display-4">Clothing Catalog</h1>
+            
+            <!-- Men's Clothing -->
+            <h2 class="mt-4">Men's Clothing</h2>
+            <div class="row">
+                <!-- Start of Men's Clothing Items -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/rubashka la chemesie.webp" class="card-img-top" alt="Men's Clothing Item 1">
+                        <div class="card-body">
+                            <h5 class="card-title"> Jacquemus </h5>
+                            <p class="card-text">La Chemise Maille rose-jacquard shirt</p>
+                            <p class="card-text">$739</p>
+                            
+                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/maisonjeans.webp" class="card-img-top" alt="Men's Clothing Item 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Maison Margiela</h5>
+                            <p class="card-text">four-stitch straight-leg jeans</p>
+                            <p class="card-text">$528</p>
+                            
+                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/polo RL zip.webp" class="card-img-top" alt="Men's Clothing Item 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Polo Ralph Lauren</h5>
+                            <p class="card-text">embroidery-logo pullover hoodie</p>
+                            <p class="card-text">$205</p>
+                            
+                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/balenci hoodie.webp" class="card-img-top" alt="Men's Clothing Item 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Balenciaga</h5>
+                            <p class="card-text">Tape Type hoodie</p>
+                            <p class="card-text">$1,245</p>
+                            
+                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/balenci puhan.webp" class="card-img-top" alt="Men's Clothing Item 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Balenciaga</h5>
+                            <p class="card-text">hooded puffer jacket</p>
+                            <p class="card-text">$3,500</p>
+                            
+                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/acne stud tee.webp" class="card-img-top" alt="Men's Clothing Item 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Acne Studios</h5>
+                            <p class="card-text">logo-print cotton T-shirt</p>
+                            <p class="card-text">$228</p>
+                            
+                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+        
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- End of Men's Clothing Items -->
+            </div>
+        
+            <!-- Women's Clothing -->
+            <h2 class="mt-4">Women's Clothing</h2>
+            <div class="row">
+                <!-- Start of Women's Clothing Items -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/solace dress.webp" class="card-img-top" alt="Women's Clothing Item 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Solace London</h5>
+                            <p class="card-text">Lily one-shoulder maxi dress</p>
+                            <p class="card-text">$565</p>
+                            
+                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/diesel huinya.webp" class="card-img-top" alt="Men's Clothing Item 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Diesel</h5>
+                            <p class="card-text">M-Areesa logo-embroidered jumper.</p>
+                            <p class="card-text">$333</p>
+                            
+                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/lacoste skorts.webp" class="card-img-top" alt="Men's Clothing Item 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Lacoste                    </h5>
+                            <p class="card-text">logo-patch pleated taffeta skorts</p>
+                            <p class="card-text">$133</p>
+                            
+                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/balenci sex.webp" class="card-img-top" alt="Men's Clothing Item 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Balenciaga</h5>
+                            <p class="card-text">logo-embroidered gown</p>
+                            <p class="card-text">$1,850
+                            </p>
+                            
+                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/balnci bomber.jpeg" class="card-img-top" alt="Men's Clothing Item 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Balenciaga
+                            </h5>
+                            <p class="card-text">ruched bomber jacket</p>
+                            <p class="card-text">$3,000
+                            </p>
+                            
+                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/frankie.webp" class="card-img-top" alt="Men's Clothing Item 6">
+                        <div class="card-body">
+                            <h5 class="card-title">The Frankie Shop</h5>
+                            <p class="card-text">boat-neck striped crop top.</p>
+                            <p class="card-text">$130</p>
+                            
+                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+            
+        
+             
+                
+               
+        
+        
+        
+        
+        
+        </div>
+        
+
+
+
+
+
+        <!-- BODY-->
+
+        <footer class="d-flex justify-content-between my-5 text-start flex-wrap">
+            <ul class="nav flex-column">
+                <li class="fw-bold nav-item">
+                    <a href="#" class="nav-link text-light">
+                        Product
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        Clothing
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        Shoes
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        Accessories
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav flex-column">
+                <li class="fw-bold nav-item text-light">
+                    <a href="#" class="nav-link text-light">
+                        Help
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        Shopping Guide
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        Product Care
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        Contact Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        Return Process
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav flex-column">
+                <li class="fw-bold nav-item text-dark">
+                    <a href="#" class="nav-link text-light">
+                        Content
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        Blog
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        Career
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-secondary">
+                        Pressroom
+                    </a>
+                </li>
+            </ul>
+        </footer>
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>
