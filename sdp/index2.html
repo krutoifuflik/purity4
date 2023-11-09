@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graduation Countdown</title>
+</head>
+<body>
+    <h1>My Name and Group</h1>
+    <p id="nameGroup"></p>
+
+    <h2>Current Date and Time</h2>
+    <p id="currentDateTime"></p>
+
+    <h2>Graduation Countdown</h2>
+    <p id="graduationCountdown"></p>
+
+    <script>
+        
+        function displayNameAndGroup() {
+            const name = "Ali Nauryzbaev";
+            const group = "SE-2212";
+            document.getElementById("nameGroup").textContent = `Name: ${name}, Group: ${group}`;
+        }
+
+        
+        function displayCurrentDateTime() {
+            const now = new Date();
+            const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const dayOfWeek = daysOfWeek[now.getDay()];
+
+            const currentDate = now.getDate();
+            const currentMonth = now.toLocaleString('default', { month: 'long' });
+            const currentYear = now.getFullYear();
+            const currentTime = now.toLocaleTimeString();
+
+            document.getElementById("currentDateTime").textContent = `
+                Year: ${currentYear}
+                Today is: ${dayOfWeek} (Day of the Week)
+                Date: ${currentDate}
+                Month: ${currentMonth}
+                Current time is: ${currentTime}
+            `;
+        }
+
+       
+        function calculateGraduationCountdown() {
+            const graduationDate = new Date('2025-05-25'); 
+            const today = new Date();
+            const timeDiff = graduationDate - today;
+            const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+            document.getElementById("graduationCountdown").textContent = `${daysLeft} days left until the freedom!`;
+        }
+
+     
+        displayNameAndGroup();
+        displayCurrentDateTime();
+        calculateGraduationCountdown();
+    </script>
+</body>
+</html>

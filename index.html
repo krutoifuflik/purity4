@@ -10,13 +10,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/purity.ico" type="image/x-icon">
 </head>
 
 
 
 <body>
-
+<!--NAVBAR-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed top-0 start-0 w-100">
             <div class="container">
                 <a class="navbar-brand d-lg-none" href="index.html">
@@ -43,45 +43,34 @@
                         P U R I T Y
                         </a>
                         <ul class="navbar-nav">
-                            <li class="nav-item dropdown d-flex align-items-center ">
-                            <a class="nav-link dropdown-toggle " href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-user"></i>
-                                My Account
-
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                <li>
-                                    
-                                        <button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#SingInModal" id="signInBtn">
-                                    
-                                            Sing In
+                            <li class="nav-item dropdown d-flex align-items-center">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-user"></i>
+                                    My Account
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                    <li>
+                                        <button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#SignInModal" id="signInBtn">
+                                            Sign In
                                         </button>
-                                    
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                    
-                                        <button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#SingUpModal" id="signUpBtn">
-                                    
-                                            Sing Up
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#SignUpModal" id="signUpBtn">
+                                            Sign Up
                                         </button>
-                                     </a>
-                                </li>
-                                
-                            </ul>
-                      
+                                    </li>
+                                </ul>
                             </li>
                             <li class="nav-item d-flex align-items-center">
                                 <a class="nav-link mx-2" href="Bag.html">
                                     <i class="fas fa-shopping-bag"></i>
-                                 Bag
+                                    Bag
                                 </a>
-                             <span class="badge rounded-pill bg-secondary">
-                                 1
+                                <span class="badge rounded-pill bg-secondary">
+                                    1
                                 </span>
                             </li>
                         </ul>
-                    
                     </div>
 
                 
@@ -115,8 +104,8 @@
                                 </a>
                             </li>
                             <li class="nav-tem mx-2">
-                                <a class="nav-link" href="#">
-                                Contact
+                                <a class="nav-link" href="to-do.html">
+                                To-Do list
                                 </a>
                             </li>
                         </ul>
@@ -124,53 +113,65 @@
                 </div>
             </div>
         </nav>
+        <!--NAVBAR-->
+
         <!-- MODAL-->
-        <div class="modal fade" id="SingInModal" tabindex="-1" aria-labelledby="SingInModalLabel" aria-hidden="true">
+        <div class="modal fade" id="SignInModal" tabindex="-1" aria-labelledby="SignInModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="SignInModalLabel">
-                            Sign IN
+                            Sign In
                         </h5>
-                        <button class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                       <form action="">
-                        <div class="row mb-3">
-                            <label for="InputEmail" class="col-sm-2 col-form-label">E-mail</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="InputEmail">
+                        <form id="signInForm">
+                            <div class="row mb-3">
+                                <label for="InputEmail" class="col-sm-2 col-form-label">E-mail</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="InputEmail" required>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="InputPass" class="col-sm-2 col-form-label">Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" id="InputPass">
+                            <div class="row mb-3">
+                                <label for="InputPass" class="col-sm-2 col-form-label">Password</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="InputPass" required>
+                                </div>
                             </div>
-                        </div>
-                        <fieldset>
-                            <div class="row mb-3"
-                                <div class="col-from-label col-sm-10">Save Password?</div>
-
-                                    <div class="col-sm-10">
-                                        <div class="form-check">
-                                            <input type="checkbox" id="gridcheck" class="form-check-input">
-                                            <label for="gridcheck" class="form-check-label">save</label>
-                                        </div>
-                                     </div>
-                            
-                        </fieldset>
-                       </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button class="btn btn-secondary">Save Changes</button>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Sign In</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-
+        
+        <!-- JavaScript for Form Validation and Notification -->
+        <script>
+            document.getElementById('signInForm').addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the form from submitting
+                const emailInput = document.getElementById('InputEmail').value;
+                const passwordInput = document.getElementById('InputPass').value;
+        
+                // Check the email and password for a successful login
+                if (emailInput === "ali.nauryzbaev@gmail.com" && passwordInput === "123321") {
+                    // Replace this with your preferred notification method (e.g., alert, toast, etc.)
+                    alert('Successful Login!');
+        
+                    // Close the modal when login is successful
+                    $('#SignInModal').modal('hide');
+                } else {
+                    // Display an error message for failed login
+                    alert('Invalid email or password. Please try again.');
+                }
+            });
+        </script>
+        
 <!-- MODAL-->
+<!--BODY-->
         <div class="container position-relative text-center">
             <header class="position-relative text-center text-white mb-5">
                 
@@ -208,23 +209,69 @@
 
                 </div>
             </header>
-            <h2 class="display-6 py-5">
-                Most Popular
-            </h2>
+
+
+            <style>
+                /* Keyframes animation to make the text pulse */
+                @keyframes pulse {
+                    0% { transform: scale(1); }
+                    50% { transform: scale(1.1); }
+                    100% { transform: scale(1); }
+                }
+            
+                /* Apply the animation to the text */
+                .autumn-sales {
+                animation: pulse 2s infinite; /* Adjust duration as needed */
+                color: red;
+                }
+            </style>
+            
+            <h2 class="display-6 py-5 autumn-sales">Autumn Sales UP TO 50%</h2>
+            
+            <!-- Countdown Timer -->
+                <div id="countdown" class="text-center mt-4">
+                    <p>Time left for the sale: <span id="timer"></span></p>
+                </div>
+
+                <script>
+                    // Set the end time of the sale (modify as needed)
+                    const saleEndTime = new Date('2023-11-15T00:00:00').getTime();
+
+                    // Update the countdown every second
+                    const timerInterval = setInterval(updateCountdown, 1000);
+
+                    function updateCountdown() {
+                        const now = new Date().getTime();
+                        const distance = saleEndTime - now;
+
+                        if (distance <= 0) {
+                            clearInterval(timerInterval);
+                            document.getElementById("timer").innerHTML = "Sale Ended!";
+                        } else {
+                            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                            document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                        }
+                    }
+                </script>
+
+
             <div class="d-flex justify-content-between align-items-center flex-column flex-lg-row my-5" id="new">
                 <div class="card m-2">
                     <a href="./product.html">
                         <img src="images/clothes1.webp" class="card-image-top" height="300" width="275" alt="Product">
                     </a>
                     <div class="card-body">
-                        <p class="card-text fw-bold">
-                            Balenciaga logo-print hoodie
-                        </p>
-                        <small class="text-secondary">
-                            USD 799$
-                        </small>
+                        <p class="card-text fw-bold">Balenciaga logo-print hoodie</p>
+                        <small class="text-secondary">USD 799$</small> <!-- Original price -->
+                        <br>
+                        <small class="text-success">USD 399$ (50% off)</small> <!-- Sale price -->
                     </div>
                 </div>
+                
                 <div class="card m-2">
                     <a href="./product.html">
                         <img src="images/clothes2.jpeg" class="card-image-top" height="300" width="275" alt="Product">
@@ -236,6 +283,8 @@
                         <small class="text-secondary">
                             USD 1,295$
                         </small>
+                        <br>
+                        <small class="text-success">777USD $ (40% off)</small>
                     </div>
                 </div>
                 <div class="card m-2">
@@ -249,6 +298,8 @@
                         <small class="text-secondary">
                             USD 315$
                         </small>
+                        <br>
+                        <small class="text-success">252USD $ (20% off)</small>
                     </div>
                 </div>
                 <div class="card m-2">
@@ -263,6 +314,8 @@
                         <small class="text-secondary">
                             USD 691$
                         </small>
+                        <br>
+                        <small class="text-success">483USD $ (30% off)</small>
                     </div>
                 </div>
 
@@ -291,12 +344,14 @@
 
                 </div>
             </div>
+
+            <!--IMAGES WITH TEXT-->
             <div class="row text-start align-items-center gy-5 my-5">
                 <div class="col-12 col-md-6">
                     <img src="images/aboutimg1.jpeg" class="h-100 w-100 rounded">
                 </div>
                 <div class="col-12 col-md-6">
-                    <div>
+                    <div id="celine-section">
                         <h2 class="display-4">
                             CELINE
                         </h2>
@@ -308,37 +363,118 @@
             </div>
             <div class="row text-start align-items-center gy-5 my-5">
                 <div class="col-12 col-md-6">
-                    <div>
+                    <div id="vivienne-section">
                         <h2 class="display-4">
                             Vivienne Westwood
                         </h2>
                         <p>
                             Dame Vivienne Isabel Westwood DBE RDI (née Swire; 8 April 1941 – 29 December 2022) was an English fashion designer and businesswoman, largely responsible for bringing modern punk and new wave fashions into the mainstream. In 2022, Sky Arts ranked her the 4th most influential artist in Britain of the last 50 years.
                         </p>
-                        
-
-                
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
                     <img src="images/brand2.jpeg" class="w-100 h-100">
-                </div>    
-
+                </div>
+            </div>
+          
             
-             </div>
-             <section class="my-5 mx-auto py-5" style="max-width: 25em;">
+            
+
+            <script>
+                const celineSection = document.getElementById("celine-section");
+                const vivienneSection = document.getElementById("vivienne-section");
+                let animated = false;
+            
+                // Function to check if an element is in the viewport
+                function isElementInViewport(el) {
+                    const rect = el.getBoundingClientRect();
+                    return (
+                        rect.top >= 0 &&
+                        rect.left >= 0 &&
+                        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                    );
+                }
+            
+                // Function to handle the animation
+                function handleAnimation() {
+                    if (!animated && isElementInViewport(celineSection)) {
+                        celineSection.style.opacity = 1;
+                        celineSection.style.transform = "translateX(0)";
+                        vivienneSection.style.opacity = 1;
+                        vivienneSection.style.transform = "translateX(0)";
+                        animated = true;
+                    }
+                }
+            
+                // Add a scroll event listener to trigger the animation
+                window.addEventListener("scroll", handleAnimation);
+            
+                // Initially check for the animation when the page loads
+                handleAnimation();
+            </script>
+            
+        
+            
+            
+            <!--IMAGES WITH TEXT-->
+            
+
+            <!-- SUBSCRIBE TO OUR NEWSLETTER -->
+
+            <section class="my-5 mx-auto py-5" style="max-width: 25em;">
                 <h2>
                     Subscribe to our newsletter
                 </h2>
-                <form class="d-flex my-4">
-                    <input class="form-control me-2" type="search" placeholder="Your E-mail">
-                    <button class="btn btn-outline-light" type="submit">
+                <form class="d-flex my-4" id="newsletter-form">
+                    <input class="form-control me-2" type="email" id="email-input" placeholder="Your E-mail">
+                    <button class="btn btn-outline-light" type="submit" id="subscribe-btn">
                         Subscribe
                     </button>
-
                 </form>
-
+                <div id="feedback-message" class="text-danger"></div>
             </section>
+
+            
+
+            <script>
+                const form = document.getElementById("newsletter-form");
+                const emailInput = document.getElementById("email-input");
+                const subscribeButton = document.getElementById("subscribe-btn");
+                const feedbackMessage = document.getElementById("feedback-message");
+
+                form.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    const email = emailInput.value.trim();
+
+                    if (!email) {
+                        feedbackMessage.textContent = "Please enter your email.";
+                        return;
+                    }
+
+                    // You can add more advanced email validation here
+                    if (!isValidEmail(email)) {
+                        feedbackMessage.textContent = "Please enter a valid email address.";
+                        return;
+                    }
+
+                    // If the email is valid, you can proceed to submit the form or perform other actions.
+                    // For this example, we'll display a success message.
+                    feedbackMessage.textContent = "Thank you for subscribing!";
+                    emailInput.value = "";
+                    subscribeButton.disabled = true;
+                });
+
+                // Function to validate email using a simple regular expression
+                function isValidEmail(email) {
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return emailPattern.test(email);
+                }
+            </script>
+
+            <!-- SUBSCRIBE TO OUR NEWSLETTER -->
+
+<!--BODY-->
             <footer class="d-flex justify-content-between my-5 text-start flex-wrap">
                 <ul class="nav flex-column">
                     <li class="fw-bold nav-item">

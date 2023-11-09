@@ -11,3 +11,71 @@ body{
 .modal-content{
     color: black;
 }
+ /* Add any custom CSS styles here */
+ .product-list {
+    list-style: none;
+    padding: 0;
+}
+
+.product-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.remove-button {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.remove-button:hover {
+    background-color: #ff3333;
+}
+
+.payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.payment-method {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.payment-method.selected {
+    border: 2px solid #007bff;
+}
+
+#totalPrice {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.checkout-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-button:hover {
+    background-color: #0056b3;
+}
+#celine-section, #vivienne-section {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s, transform 0.5s;
+}

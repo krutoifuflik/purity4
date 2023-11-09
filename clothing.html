@@ -10,177 +10,190 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/purity.ico" type="image/x-icon">
 </head>
 
 
 
 <body>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed top-0 start-0 w-100">
-            <div class="container">
-                <a class="navbar-brand d-lg-none" href="index.html">
-                    P U R I T Y
-                </a>
-            
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-                <span class="navbar-toggler-icon"></span>
-        
+  <!--NAVBAR-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed top-0 start-0 w-100">
+    <div class="container">
+        <a class="navbar-brand d-lg-none" href="index.html">
+            P U R I T Y
+        </a>
+    
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+
+            </button>
+        <div class="collapse navbar-collapse p-2 flex-column" id="navbarContent">
+            <div class="d-flex justify-content-center justify-content-lg-between flex-column flex-lg-row w-100">
+                <form class="d-flex">
+                    <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                />
+                 <button class="btn btn-outline-dark" type="submit">
+                    <i class="fas fa-search"></i>
                     </button>
-                <div class="collapse navbar-collapse p-2 flex-column" id="navbarContent">
-                    <div class="d-flex justify-content-center justify-content-lg-between flex-column flex-lg-row w-100">
-                        <form class="d-flex">
-                            <input
-                        class="form-control me-2"
-                        type="search"
-                        placeholder="Search"
-                        />
-                         <button class="btn btn-outline-dark" type="submit">
-                            <i class="fas fa-search"></i>
-                            </button>
-                        </form>
-                        <a class="navbar-brand d-none d-lg-block" href="index.html">
-                        P U R I T Y
+                </form>
+                <a class="navbar-brand d-none d-lg-block" href="index.html">
+                P U R I T Y
+                </a>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown d-flex align-items-center">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user"></i>
+                            My Account
                         </a>
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown d-flex align-items-center ">
-                            <a class="nav-link dropdown-toggle " href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-user"></i>
-                                My Account
-
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                <li>
-                                    
-                                        <button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#SingInModal" id="signInBtn">
-                                    
-                                            Sing In
-                                        </button>
-                                    
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                    
-                                        <button class="nav-link mx-2" id="signUpBtn">
-                                        Sign Up
-                                    
-                                        </button>
-                                     </a>
-                                </li>
-                                
-                            </ul>
-                      
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li>
+                                <button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#SignInModal" id="signInBtn">
+                                    Sign In
+                                </button>
                             </li>
-                            <li class="nav-item d-flex align-items-center">
-                                <a class="nav-link mx-2" href="Bag.html">
-                                    <i class="fas fa-shopping-bag"></i>
-                                 Bag
-                                </a>
-                             <span class="badge rounded-pill bg-secondary">
-                                 1
-                                </span>
+                            <li>
+                                <button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#SignUpModal" id="signUpBtn">
+                                    Sign Up
+                                </button>
                             </li>
                         </ul>
-                    
-                    </div>
-
-                
-
-
-                    <div class="d-block w-100">
-                        <ul class="navbar-nav d-flex justify-content-center align-items-center pt-3">
-                            <li class="nav-tem mx-2">
-                             <a class="nav-link" href="clothing.html">
-                                Clothing
-                                </a>
-                            </li>
-                            <li class="nav-tem mx-2">
-                                <a class="nav-link" href="#">
-                                Shoes
-                                </a>
-                            </li>
-                            <li class="nav-tem mx-2">
-                                <a class="nav-link" href="#">
-                                Accessories
-                                </a>
-                            </li>
-                            <li class="nav-tem mx-2">
-                                <a class="nav-link" href="#">
-                                About
-                                </a>
-                            </li>
-                            <li class="nav-tem mx-2">
-                                <a class="nav-link" href="#">
-                                Blog
-                                </a>
-                            </li>
-                            <li class="nav-tem mx-2">
-                                <a class="nav-link" href="#">
-                                Contact
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link mx-2" href="Bag.html">
+                            <i class="fas fa-shopping-bag"></i>
+                            Bag
+                        </a>
+                        <span class="badge rounded-pill bg-secondary">
+                            1
+                        </span>
+                    </li>
+                </ul>
             </div>
-        </nav>
-        <!-- MODAL-->
-        <div class="modal fade" id="SingInModal" tabindex="-1" aria-labelledby="SingInModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="SignInModalLabel">
-                            Sign IN
-                        </h5>
-                        <button class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
-                    </div>
-                    <div class="modal-body">
-                       <form action="">
-                        <div class="row mb-3">
-                            <label for="InputEmail" class="col-sm-2 col-form-label">E-mail</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="InputEmail">
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="InputPass" class="col-sm-2 col-form-label">Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" id="InputPass">
-                            </div>
-                        </div>
-                        <fieldset>
-                            <div class="row mb-3"
-                                <div class="col-from-label col-sm-10">Save Password?</div>
 
-                                    <div class="col-sm-10">
-                                        <div class="form-check">
-                                            <input type="checkbox" id="gridcheck" class="form-check-input">
-                                            <label for="gridcheck" class="form-check-label">save</label>
-                                        </div>
-                                     </div>
-                            
-                        </fieldset>
-                       </form>
+        
+
+
+            <div class="d-block w-100">
+                <ul class="navbar-nav d-flex justify-content-center align-items-center pt-3">
+                    <li class="nav-tem mx-2">
+                     <a class="nav-link" href="clothing.html">
+                        Clothing
+                        </a>
+                    </li>
+                    <li class="nav-tem mx-2">
+                        <a class="nav-link" href="#">
+                        Shoes
+                        </a>
+                    </li>
+                    <li class="nav-tem mx-2">
+                        <a class="nav-link" href="#">
+                        Accessories
+                        </a>
+                    </li>
+                    <li class="nav-tem mx-2">
+                        <a class="nav-link" href="#">
+                        About
+                        </a>
+                    </li>
+                    <li class="nav-tem mx-2">
+                        <a class="nav-link" href="#">
+                        Blog
+                        </a>
+                    </li>
+                    <li class="nav-tem mx-2">
+                        <a class="nav-link" href="to-do.html">
+                        To-Do list
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<!--NAVBAR-->
+
+<!-- MODAL-->
+<div class="modal fade" id="SignInModal" tabindex="-1" aria-labelledby="SignInModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="SignInModalLabel">
+                    Sign In
+                </h5>
+                <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="signInForm">
+                    <div class="row mb-3">
+                        <label for="InputEmail" class="col-sm-2 col-form-label">E-mail</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="InputEmail" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="InputPass" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="InputPass" required>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button class="btn btn-secondary">Save Changes</button>
+                        <button type="submit" class="btn btn-primary">Sign In</button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
-        <!-- MODAL-->
+    </div>
+</div>
+
+<!-- JavaScript for Form Validation and Notification -->
+<script>
+    document.getElementById('signInForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the form from submitting
+        const emailInput = document.getElementById('InputEmail').value;
+        const passwordInput = document.getElementById('InputPass').value;
+
+        // Check the email and password for a successful login
+        if (emailInput === "ali.nauryzbaev@gmail.com" && passwordInput === "123321") {
+            // Replace this with your preferred notification method (e.g., alert, toast, etc.)
+            alert('Successful Login!');
+
+            // Close the modal when login is successful
+            $('#SignInModal').modal('hide');
+        } else {
+            // Display an error message for failed login
+            alert('Invalid email or password. Please try again.');
+        }
+    });
+</script>
+
+<!-- MODAL-->
+    
+
 
 
         <!-- BODY-->
 
         <div class="container py-5">
             <h1 class="display-4">Clothing Catalog</h1>
-            
+            <ul class="nav nav-tabs" id="clothingTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="mens-tab" data-bs-toggle="tab" href="#mens-clothing" role="tab" aria-controls="mens-clothing" aria-selected="true">Men's Clothing</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="womens-tab" data-bs-toggle="tab" href="#womens-clothing" role="tab" aria-controls="womens-clothing" aria-selected="false">Women's Clothing</a>
+                </li>
+            </ul>
             <!-- Men's Clothing -->
-            <h2 class="mt-4">Men's Clothing</h2>
+            <div class="tab-content" id="clothingTabContent">
+                <div class="tab-pane fade show active" id="mens-clothing" role="tabpanel" aria-labelledby="mens-tab">
             <div class="row">
                 <!-- Start of Men's Clothing Items -->
+               
                 <div class="col-md-4 mb-4">
                     <div class="card">
                         <img src="images/rubashka la chemesie.webp" class="card-img-top" alt="Men's Clothing Item 1">
@@ -189,7 +202,8 @@
                             <p class="card-text">La Chemise Maille rose-jacquard shirt</p>
                             <p class="card-text">$739</p>
                             
-                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+                            <a href="#" class="btn btn-secondary add-to-bag">Add To Bag</a>
+
         
                         </div>
                     </div>
@@ -202,7 +216,8 @@
                             <p class="card-text">four-stitch straight-leg jeans</p>
                             <p class="card-text">$528</p>
                             
-                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+                            <a href="#" class="btn btn-secondary add-to-bag">Add To Bag</a>
+
         
                         </div>
                     </div>
@@ -215,7 +230,8 @@
                             <p class="card-text">embroidery-logo pullover hoodie</p>
                             <p class="card-text">$205</p>
                             
-                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+                            <a href="#" class="btn btn-secondary add-to-bag">Add To Bag</a>
+
         
                         </div>
                     </div>
@@ -228,7 +244,8 @@
                             <p class="card-text">Tape Type hoodie</p>
                             <p class="card-text">$1,245</p>
                             
-                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+                            <a href="#" class="btn btn-secondary add-to-bag">Add To Bag</a>
+
         
                         </div>
                     </div>
@@ -241,7 +258,8 @@
                             <p class="card-text">hooded puffer jacket</p>
                             <p class="card-text">$3,500</p>
                             
-                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+                            <a href="#" class="btn btn-secondary add-to-bag">Add To Bag</a>
+
         
                         </div>
                     </div>
@@ -254,7 +272,8 @@
                             <p class="card-text">logo-print cotton T-shirt</p>
                             <p class="card-text">$228</p>
                             
-                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+                            <a href="#" class="btn btn-secondary add-to-bag">Add To Bag</a>
+
         
                         </div>
                     </div>
@@ -264,7 +283,8 @@
             </div>
         
             <!-- Women's Clothing -->
-            <h2 class="mt-4">Women's Clothing</h2>
+        </div>
+        <div class="tab-pane fade" id="womens-clothing" role="tabpanel" aria-labelledby="womens-tab">
             <div class="row">
                 <!-- Start of Women's Clothing Items -->
                 <div class="col-md-4 mb-4">
@@ -275,7 +295,8 @@
                             <p class="card-text">Lily one-shoulder maxi dress</p>
                             <p class="card-text">$565</p>
                             
-                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+                            <a href="#" class="btn btn-secondary add-to-bag">Add To Bag</a>
+
         
                         </div>
                     </div>
@@ -288,7 +309,8 @@
                             <p class="card-text">M-Areesa logo-embroidered jumper.</p>
                             <p class="card-text">$333</p>
                             
-                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+                            <a href="#" class="btn btn-secondary add-to-bag">Add To Bag</a>
+
         
                         </div>
                     </div>
@@ -298,10 +320,11 @@
                         <img src="images/lacoste skorts.webp" class="card-img-top" alt="Men's Clothing Item 3">
                         <div class="card-body">
                             <h5 class="card-title">Lacoste                    </h5>
-                            <p class="card-text">logo-patch pleated taffeta skorts</p>
+                            <p class="card-text">logo-patch pleated taffeta shorts</p>
                             <p class="card-text">$133</p>
                             
-                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+                            <a href="#" class="btn btn-secondary add-to-bag">Add To Bag</a>
+
         
                         </div>
                     </div>
@@ -315,7 +338,8 @@
                             <p class="card-text">$1,850
                             </p>
                             
-                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+                            <a href="#" class="btn btn-secondary add-to-bag">Add To Bag</a>
+
         
                         </div>
                     </div>
@@ -330,7 +354,8 @@
                             <p class="card-text">$3,000
                             </p>
                             
-                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+                            <a href="#" class="btn btn-secondary add-to-bag">Add To Bag</a>
+
         
                         </div>
                     </div>
@@ -343,11 +368,50 @@
                             <p class="card-text">boat-neck striped crop top.</p>
                             <p class="card-text">$130</p>
                             
-                            <a href="#" class="btn btn-secondary">Add To Bag</a>
+                            <a href="#" class="btn btn-secondary add-to-bag">Add To Bag</a>
+
         
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    
+      
+    
+      
+
+    <!-- JavaScript for Interactive Tabs (after line 50) -->
+    <script>
+        const tabs = new bootstrap.Tab(document.getElementById('mens-tab'));
+        // Select the default tab (Men's Clothing)
+        tabs.show();
+        // Add event listeners for tab switching
+        document.getElementById('mens-tab').addEventListener('click', () => {
+            tabs.show();
+        });
+        document.getElementById('womens-tab').addEventListener('click', () => {
+            tabs.show();
+        });
+    </script>
+
+    <!-- Smooth Scrolling for Navigation Links (after line 53) -->
+    <script>
+        document.querySelectorAll('a.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth',
+                    });
+                }
+            });
+        });
+    </script>
             </div>
         </div>
         
