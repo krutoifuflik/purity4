@@ -120,9 +120,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="SignInModalLabel">
-                            Sign In
-                        </h5>
+                        <h5 class="modal-title" id="SignInModalLabel">Sign In</h5>
                         <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -139,6 +137,10 @@
                                     <input type="password" class="form-control" id="InputPass" required>
                                 </div>
                             </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="showPassword">
+                                <label class="form-check-label" for="showPassword">Show Password</label>
+                            </div>
                             <div class="modal-footer">
                                 <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                 <button type="submit" class="btn btn-primary">Sign In</button>
@@ -150,14 +152,21 @@
         </div>
         
         <!-- JavaScript for Form Validation and Notification -->
+        
         <script>
             document.getElementById('signInForm').addEventListener('submit', function (event) {
-                event.preventDefault(); // Prevent the form from submitting
+                event.preventDefault();
                 const emailInput = document.getElementById('InputEmail').value;
-                const passwordInput = document.getElementById('InputPass').value;
+                const passwordInput = document.getElementById('InputPass');
+        
+                const showPasswordCheckbox = document.getElementById('showPassword');
+                const isPasswordVisible = showPasswordCheckbox.checked;
+        
+                // Toggle password visibility based on the checkbox state
+                passwordInput.type = isPasswordVisible ? 'text' : 'password';
         
                 // Check the email and password for a successful login
-                if (emailInput === "ali.nauryzbaev@gmail.com" && passwordInput === "123321") {
+                if (emailInput === "ali.nauryzbaev@gmail.com" && passwordInput.value === "123321") {
                     // Replace this with your preferred notification method (e.g., alert, toast, etc.)
                     alert('Successful Login!');
         
@@ -168,7 +177,104 @@
                     alert('Invalid email or password. Please try again.');
                 }
             });
+        
+            // Add an event listener to toggle password visibility when the checkbox changes
+            document.getElementById('showPassword').addEventListener('change', function () {
+                const passwordInput = document.getElementById('InputPass');
+                passwordInput.type = this.checked ? 'text' : 'password';
+            });
         </script>
+
+        <!-- Sign Up Modal -->
+
+
+
+<!-- Sign Up Modal -->
+<div class="modal fade" id="SignUpModal" tabindex="-1" aria-labelledby="SignUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="SignUpModalLabel">Sign Up</h5>
+                <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="signUpForm">
+                    <div class="row mb-3">
+                        <label for="SignUpName" class="col-sm-2 col-form-label">Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="SignUpName" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="SignUpSurname" class="col-sm-2 col-form-label">Surname</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="SignUpSurname" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="SignUpEmail" class="col-sm-2 col-form-label">E-mail</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="SignUpEmail" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="SignUpPass" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="SignUpPass" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="SignUpConfirmPass" class="col-sm-2 col-form-label">Confirm Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="SignUpConfirmPass" required>
+                        </div>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="showSignUpPassword">
+                        <label class="form-check-label" for="showSignUpPassword">Show Password</label>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript for Sign Up Modal -->
+<script>
+    document.getElementById('signUpForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const signUpNameInput = document.getElementById('SignUpName').value;
+        const signUpSurnameInput = document.getElementById('SignUpSurname').value;
+        const signUpEmailInput = document.getElementById('SignUpEmail').value;
+        const signUpPasswordInput = document.getElementById('SignUpPass').value;
+        const signUpConfirmPasswordInput = document.getElementById('SignUpConfirmPass').value;
+
+        // Check if the passwords match
+        if (signUpPasswordInput !== signUpConfirmPasswordInput) {
+            alert('Passwords do not match. Please enter matching passwords.');
+            return;
+        }
+
+        // Add your registration logic here
+        // For now, let's just display a success message
+        alert(`Registration successful!\nName: ${signUpNameInput}\nSurname: ${signUpSurnameInput}\nEmail: ${signUpEmailInput}\nPassword: ${signUpPasswordInput}`);
+
+        // Close the modal after successful registration
+        $('#SignUpModal').modal('hide');
+    });
+
+    // Add an event listener to toggle password visibility when the checkbox changes
+    document.getElementById('showSignUpPassword').addEventListener('change', function () {
+        const signUpPasswordInput = document.getElementById('SignUpPass');
+        signUpPasswordInput.type = this.checked ? 'text' : 'password';
+    });
+</script>
+
+
         
 <!-- MODAL-->
 <!--BODY-->
@@ -475,6 +581,9 @@
             <!-- SUBSCRIBE TO OUR NEWSLETTER -->
 
 <!--BODY-->
+
+
+<!--FOOTER-->
             <footer class="d-flex justify-content-between my-5 text-start flex-wrap">
                 <ul class="nav flex-column">
                     <li class="fw-bold nav-item">
@@ -555,7 +664,7 @@
             </footer>
 
         
-    
+<!--FOOTER-->
 
         
 

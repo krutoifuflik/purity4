@@ -77,5 +77,46 @@ body{
 #celine-section, #vivienne-section {
     opacity: 0;
     transform: translateX(-100%);
-    transition: opacity 0.5s, transform 0.5s;
+    transition: opacity 1s, transform 3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+
+
+.list-group {
+    min-height: 100px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.list-group-item {
+    cursor: pointer;
+    user-select: none;
+}
+
+[data-drop-target="true"] {
+    background-color: #f0f0f0;
+    min-height: 120px;
+}
+.draggable {
+    cursor: grab;
+}
+
+.drop-area {
+    border: 2px dashed #007bff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.correct-drop {
+    background-color: #8bff8b;
+}
+
+.wrong-drop {
+    background-color: #ff8b8b;
 }

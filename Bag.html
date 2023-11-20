@@ -239,12 +239,123 @@
                 const total = selectedSizePrice + selectedShippingPrice;
         
                 totalPriceElement.textContent = `Total Price: USD ${total.toFixed(2)}`;
+
             }
+
+          
+                const products = [
+                {
+                    name: "Balenciaga logo-print hoodie",
+                    price: 799,
+                },
+
+                ];
+                document.getElementById('buyButton').addEventListener('click', function() {
+                     this.style.backgroundColor = 'green';
+                });
+                document.getElementById('buyButton').addEventListener('click', function() {
+                    this.style.backgroundColor = 'green';
+                    const buySound = document.getElementById('buySound');
+                    buySound.play();
+                });
+
+                
         </script>
         
+        <audio id="buySound" src="images/buy_1.mp3"></audio>
 
+        <div class="container position-relative text-center">
+            <h1>Drag-and-Drop Quiz</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Countries</h2>
+                    <ul id="countries" class="list-group">
+                        <li class="list-group-item draggable" draggable="true" data-country="USA">USA</li>
+                        <li class="list-group-item draggable" draggable="true" data-country="Japan">Japan</li>
+                        <li class="list-group-item draggable" draggable="true" data-country="Brazil">Brazil</li>
+                        <!-- Add more countries as needed -->
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h2>Continents</h2>
+                    <div id="continents" class="list-group drop-area" data-drop-target="true">
+                        <div class="list-group-item" data-continent="North America">North America</div>
+                        <div class="list-group-item" data-continent="Asia">Asia</div>
+                        <div class="list-group-item" data-continent="South America">South America</div>
+                        <!-- Add more continents as needed -->
+                    </div>
+                </div>
+            </div>
+            <button id="resetButton" class="btn btn-primary mt-3">Reset Game</button>
+        </div>
 
-
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Define your elements array
+                const elements = ["USA", "Japan", "Brazil"];
+    
+                // Initialize correct count and timer
+                let correctCount = 0;
+    
+                // Add dragstart event listeners to draggable elements
+                const draggables = document.querySelectorAll(".draggable");
+                draggables.forEach((draggable) => {
+                    draggable.addEventListener("dragstart", handleDragStart);
+                });
+    
+                // Add drop event listener to drop areas
+                const dropAreas = document.querySelectorAll(".drop-area");
+                dropAreas.forEach((area) => {
+                    area.addEventListener("dragover", handleDragOver);
+                    area.addEventListener("drop", handleDrop);
+                });
+    
+                // Add reset button event listener
+                const resetButton = document.getElementById("resetButton");
+                resetButton.addEventListener("click", resetGame);
+    
+                function handleDragStart(event) {
+                    event.dataTransfer.setData("text", event.target.dataset.country);
+                }
+    
+                function handleDragOver(event) {
+                    event.preventDefault();
+                }
+    
+                function handleDrop(event) {
+                    event.preventDefault();
+    
+                    const droppedCountry = event.dataTransfer.getData("text");
+                    const targetContinent = event.target.dataset.continent;
+    
+                    if (droppedCountry === targetContinent) {
+                        // Correct drop
+                        event.target.classList.add("correct-drop");
+                        correctCount++;
+    
+                        // Check if all elements are correctly placed
+                        if (correctCount === elements.length) {
+                            // All correct, display a message or perform any action
+                            alert("Congratulations! You placed all elements correctly.");
+                        }
+                    } else {
+                        // Wrong drop
+                        event.target.classList.add("wrong-drop");
+                    }
+                }
+    
+                function resetGame() {
+                    // Reset correct count and start time
+                    correctCount = 0;
+    
+                    // Remove any added classes for correct/wrong drops
+                    const dropAreas = document.querySelectorAll(".drop-area");
+                    dropAreas.forEach((area) => {
+                        area.classList.remove("correct-drop", "wrong-drop");
+                    });
+                }
+            });
+        </script>
 
 
         <!-- BODY-->
@@ -341,7 +452,7 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="assets/js/scripts.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="assets/js/scripts.js"></script>
+    </body>
 </html>
