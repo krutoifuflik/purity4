@@ -16,103 +16,134 @@
 
 
 <body>
-<!--NAVBAR-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed top-0 start-0 w-100">
-            <div class="container">
-                <a class="navbar-brand d-lg-none" href="index.html">
-                    P U R I T Y
-                </a>
-            
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-                <span class="navbar-toggler-icon"></span>
+    <section class="popupform">
+        <button class="open-button" onclick="openForm()"><img src="images/comment-regular.svg" alt=""></button>
         
+        <div class="chat-popup" id="myForm">
+            <form class="form-container" action="#">
+                <h1 style="color:black">Chat</h1>
+
+                <label for="msg">Enter your message below!</label>
+                <textarea placeholder="Type your message..." name="msg" required></textarea>
+
+                <button type="submit" class="btn">Send</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Cancel/Close</button>
+            </form>
+        </div>
+        <script>
+            function openForm(){
+                document.getElementById("myForm").style.display="block";
+
+            }
+            function closeForm(){
+                document.getElementById("myForm").style.display="none";
+
+            }
+
+        </script>
+
+        
+    </section>
+    
+
+    
+
+
+
+<!--NAVBAR-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed top-0 start-0 w-100">
+    <div class="container">
+        <a class="navbar-brand d-lg-none" href="index.html">
+            P U R I T Y
+        </a>
+    
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+
+            </button>
+        <div class="collapse navbar-collapse p-2 flex-column" id="navbarContent">
+            <div class="d-flex justify-content-center justify-content-lg-between flex-column flex-lg-row w-100">
+                <form class="d-flex">
+                    <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                />
+                 <button class="btn btn-outline-dark" type="submit">
+                    <i class="fas fa-search"></i>
                     </button>
-                <div class="collapse navbar-collapse p-2 flex-column" id="navbarContent">
-                    <div class="d-flex justify-content-center justify-content-lg-between flex-column flex-lg-row w-100">
-                        <form class="d-flex">
-                            <input
-                        class="form-control me-2"
-                        type="search"
-                        placeholder="Search"
-                        />
-                         <button class="btn btn-outline-dark" type="submit">
-                            <i class="fas fa-search"></i>
-                            </button>
-                        </form>
-                        <a class="navbar-brand d-none d-lg-block" href="index.html">
-                        P U R I T Y
+                </form>
+                <a class="navbar-brand d-none d-lg-block" href="index.html">
+                P U R I T Y
+                </a>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown d-flex align-items-center center_text">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user"></i>
+                            My Account
                         </a>
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown d-flex align-items-center">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fas fa-user"></i>
-                                    My Account
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                    <li>
-                                        <button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#SignInModal" id="signInBtn">
-                                            Sign In
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#SignUpModal" id="signUpBtn">
-                                            Sign Up
-                                        </button>
-                                    </li>
-                                </ul>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li>
+                                <button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#SignInModal" id="signInBtn">
+                                    Sign In
+                                </button>
                             </li>
-                            <li class="nav-item d-flex align-items-center">
-                                <a class="nav-link mx-2" href="Bag.html">
-                                    <i class="fas fa-shopping-bag"></i>
-                                    Bag
-                                </a>
-                                <span class="badge rounded-pill bg-secondary">
-                                    1
-                                </span>
+                            <li>
+                                <button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#SignUpModal" id="signUpBtn">
+                                    Sign Up
+                                </button>
                             </li>
                         </ul>
-                    </div>
-
-                
-
-
-                    <div class="d-block w-100">
-                        <ul class="navbar-nav d-flex justify-content-center align-items-center pt-3">
-                            <li class="nav-tem mx-2">
-                             <a class="nav-link" href="clothing.html">
-                                Clothing
-                                </a>
-                            </li>
-                            <li class="nav-tem mx-2">
-                                <a class="nav-link" href="#">
-                                Shoes
-                                </a>
-                            </li>
-                            <li class="nav-tem mx-2">
-                                <a class="nav-link" href="#">
-                                Accessories
-                                </a>
-                            </li>
-                            <li class="nav-tem mx-2">
-                                <a class="nav-link" href="#">
-                                About
-                                </a>
-                            </li>
-                            <li class="nav-tem mx-2">
-                                <a class="nav-link" href="#">
-                                Blog
-                                </a>
-                            </li>
-                            <li class="nav-tem mx-2">
-                                <a class="nav-link" href="to-do.html">
-                                To-Do list
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                    </li>
+                    <li class="nav-item d-flex align-items-center center_text">
+                        <a class="nav-link mx-2" href="Bag.html">
+                            <i class="fas fa-shopping-bag"></i>
+                            Bag
+                        </a>
+                        <span class="badge rounded-pill bg-secondary">
+                            1
+                        </span>
+                    </li>
+                </ul>
             </div>
-        </nav>
+
+        
+
+
+            <div class="d-block w-100">
+                <ul class="navbar-nav d-flex justify-content-center align-items-center pt-3">
+                    <li class="nav-tem mx-2">
+                     <a class="nav-link" href="clothing.html">
+                        Clothing
+                        </a>
+                    </li>
+
+                 
+                    <li class="nav-tem mx-2">
+                        <a class="nav-link" href="About.html">
+                        About
+                        </a>
+                    </li>
+                    <li class="nav-tem mx-2">
+                        <a class="nav-link" href="Blog.html">
+                        Blog
+                        </a>
+                    </li>
+                    <li class="nav-tem mx-2">
+                        <a class="nav-link" href="to-do.html">
+                        To-Do list
+                        </a>
+                    </li>
+                    <li class="nav-tem mx-2">
+                        <a class="nav-link" href="contact_us.html">
+                        Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
         <!--NAVBAR-->
 
         <!-- MODAL-->
@@ -151,41 +182,7 @@
             </div>
         </div>
         
-        <!-- JavaScript for Form Validation and Notification -->
-        
-        <script>
-            document.getElementById('signInForm').addEventListener('submit', function (event) {
-                event.preventDefault();
-                const emailInput = document.getElementById('InputEmail').value;
-                const passwordInput = document.getElementById('InputPass');
-        
-                const showPasswordCheckbox = document.getElementById('showPassword');
-                const isPasswordVisible = showPasswordCheckbox.checked;
-        
-                // Toggle password visibility based on the checkbox state
-                passwordInput.type = isPasswordVisible ? 'text' : 'password';
-        
-                // Check the email and password for a successful login
-                if (emailInput === "ali.nauryzbaev@gmail.com" && passwordInput.value === "123321") {
-                    // Replace this with your preferred notification method (e.g., alert, toast, etc.)
-                    alert('Successful Login!');
-        
-                    // Close the modal when login is successful
-                    $('#SignInModal').modal('hide');
-                } else {
-                    // Display an error message for failed login
-                    alert('Invalid email or password. Please try again.');
-                }
-            });
-        
-            // Add an event listener to toggle password visibility when the checkbox changes
-            document.getElementById('showPassword').addEventListener('change', function () {
-                const passwordInput = document.getElementById('InputPass');
-                passwordInput.type = this.checked ? 'text' : 'password';
-            });
-        </script>
-
-        <!-- Sign Up Modal -->
+     
 
 
 
@@ -244,37 +241,12 @@
 </div>
 
 <!-- JavaScript for Sign Up Modal -->
-<script>
-    document.getElementById('signUpForm').addEventListener('submit', function (event) {
-        event.preventDefault();
-        const signUpNameInput = document.getElementById('SignUpName').value;
-        const signUpSurnameInput = document.getElementById('SignUpSurname').value;
-        const signUpEmailInput = document.getElementById('SignUpEmail').value;
-        const signUpPasswordInput = document.getElementById('SignUpPass').value;
-        const signUpConfirmPasswordInput = document.getElementById('SignUpConfirmPass').value;
 
-        // Check if the passwords match
-        if (signUpPasswordInput !== signUpConfirmPasswordInput) {
-            alert('Passwords do not match. Please enter matching passwords.');
-            return;
-        }
+        <!-- Sign Up Modal END -->
 
-        // Add your registration logic here
-        // For now, let's just display a success message
-        alert(`Registration successful!\nName: ${signUpNameInput}\nSurname: ${signUpSurnameInput}\nEmail: ${signUpEmailInput}\nPassword: ${signUpPasswordInput}`);
-
-        // Close the modal after successful registration
-        $('#SignUpModal').modal('hide');
-    });
-
-    // Add an event listener to toggle password visibility when the checkbox changes
-    document.getElementById('showSignUpPassword').addEventListener('change', function () {
-        const signUpPasswordInput = document.getElementById('SignUpPass');
-        signUpPasswordInput.type = this.checked ? 'text' : 'password';
-    });
-</script>
-
-
+<div id="scrollToTop" class="scroll_to_top">
+    <img src="./images/up-arrow-svgrepo-com.svg" alt="">
+</div>
         
 <!-- MODAL-->
 <!--BODY-->
@@ -317,31 +289,16 @@
             </header>
 
 
-            <style>
-                /* Keyframes animation to make the text pulse */
-                @keyframes pulse {
-                    0% { transform: scale(1); }
-                    50% { transform: scale(1.1); }
-                    100% { transform: scale(1); }
-                }
-            
-                /* Apply the animation to the text */
-                .autumn-sales {
-                animation: pulse 2s infinite; /* Adjust duration as needed */
-                color: red;
-                }
-            </style>
+          
             
             <h2 class="display-6 py-5 autumn-sales">Autumn Sales UP TO 50%</h2>
             
-            <!-- Countdown Timer -->
                 <div id="countdown" class="text-center mt-4">
                     <p>Time left for the sale: <span id="timer"></span></p>
                 </div>
 
                 <script>
-                    // Set the end time of the sale (modify as needed)
-                    const saleEndTime = new Date('2023-11-15T00:00:00').getTime();
+                    const saleEndTime = new Date('2023-11-30T00:00:00').getTime();
 
                     // Update the countdown every second
                     const timerInterval = setInterval(updateCountdown, 1000);
@@ -429,7 +386,7 @@
             <a href="clothing.html" class="btn btn-outline-light my-5">
                 View All Products
             </a>
-            <div class="d-flex justify-content-between align-items-center flex-cloumn flex-lg-row my-5">
+            <div class="d-flex justify-content-between align-items-center flex-cloumn flex-lg-row my-5 suits_gallery">
                 <div class="position-relative m-2">
                     <img src="images/suits.webp" height="400" width="350" class="rounded"alt="Suits">
                     <a href="#" class="btn btn-dark position-absolute start-0 bottom-0 ms-2 mb-2 d-block">
@@ -584,37 +541,29 @@
 
 
 <!--FOOTER-->
-            <footer class="d-flex justify-content-between my-5 text-start flex-wrap">
+            <footer class="footer container d-flex justify-content-between my-5 text-start flex-wrap">
                 <ul class="nav flex-column">
                     <li class="fw-bold nav-item">
-                        <a href="#" class="nav-link text-light">
+                        <a href="index.html" class="nav-link text-light">
                             Product
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-secondary">
+                        <a href="clothing.html" class="nav-link text-secondary">
                             Clothing
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-secondary">
-                            Shoes
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-secondary">
-                            Accessories
-                        </a>
-                    </li>
+                
+                   
                 </ul>
                 <ul class="nav flex-column">
                     <li class="fw-bold nav-item text-light">
-                        <a href="#" class="nav-link text-light">
+                        <a href="contact_us.html" class="nav-link text-light">
                             Help
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-secondary">
+                        <a href="clothing.html" class="nav-link text-secondary">
                             Shopping Guide
                         </a>
                     </li>
@@ -624,42 +573,29 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-secondary">
+                        <a href="contact_us.html" class="nav-link text-secondary">
                             Contact Us
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-secondary">
-                            Return Process
-                        </a>
-                    </li>
+                  
                 </ul>
                 <ul class="nav flex-column">
                     <li class="fw-bold nav-item text-dark">
-                        <a href="#" class="nav-link text-light">
+                        <a href="index.html" class="nav-link text-light">
                             Content
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-secondary">
+                        <a href="About.html" class="nav-link text-secondary">
                             About
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-secondary">
+                        <a href="Blog.html" class="nav-link text-secondary">
                             Blog
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-secondary">
-                            Career
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-secondary">
-                            Pressroom
-                        </a>
-                    </li>
+                
                 </ul>
             </footer>
 
@@ -677,6 +613,8 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/scroll_to_top.js"></script>
+    <script src="assets/js/modal.js"></script>
+
 </body>
 </html>
